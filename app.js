@@ -21,6 +21,26 @@ function splitArrayByIndex(arr) {
     return { evenArr, oddArr };
 }
 
+function findMin(arr) {
+    let min = arr[0];
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] < min) {
+            min = arr[i];
+        }
+    }
+    return min;
+}
+
+function findMax(arr) {
+    let max = arr[0];
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+    }
+    return max;
+}
+
 function main() {
     const randomArray = generateRandomArray(100, 1, 50);
     
@@ -29,6 +49,9 @@ function main() {
     console.log("Array dengan jumlah index 100:", randomArray);
     console.log("Array genap dengan jumlah index 50:", evenArr);
     console.log("Array ganjil dengan jumlah index 50:", oddArr);
+  
+    console.log("Min:", findMin(evenArr));
+    console.log("Max:", findMax(evenArr));
 
 }
 
