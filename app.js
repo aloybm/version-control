@@ -41,6 +41,19 @@ function findMax(arr) {
     return max;
 }
 
+function calculateTotal(arr) {
+    let total = 0;
+    for (let i = 0; i < arr.length; i++) {
+        total += arr[i];
+    }
+    return total;
+}
+
+function calculateAverage(arr) {
+    const total = calculateTotal(arr);
+    return total / arr.length;
+}
+
 function main() {
     const randomArray = generateRandomArray(100, 1, 50);
     
